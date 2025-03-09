@@ -1,0 +1,149 @@
+/* Container and Sidebar styles */
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+.sidebar {
+  width: 450px;
+  background: #f8f8f8;
+  padding: 20px;
+  transition: width 0.3s ease;
+  overflow: hidden;
+}
+
+.sidebar.closed {
+  width: 50px;
+}
+
+.toggle-btn {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Main container styles */
+.main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #ddd;
+  overflow: hidden;
+}
+
+/* Image container to hold both images */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Background image settings */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: 1; 
+}
+
+/* Statue image settings */
+.statue {
+  position: absolute;
+  top: 30%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  max-width: 545px; 
+  opacity: 0.8; 
+  z-index: 2; 
+  
+  /* White shadow effect */
+  filter: drop-shadow(0px 20px 30px rgba(255, 255, 255, 0.7)); 
+}
+
+h5{
+   color:peru ;
+}
+
+button{
+ 
+  background-color:peru;
+  color: #ddd;
+  margin-right: 10px;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  .main {
+    height: 60vh;
+  }
+
+  /* Adjust statue size for mobile */
+  .statue {
+    max-width: 90%;
+  }
+}
+
+/* App.css */
+
+/* Icon Section Container */
+.icon-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Icon Styling */
+.icon {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for icons */
+.icon:hover {
+  color: #646cff;
+}
+
+/* Icon Font Awesome */
+.icon i {
+  margin-right: 8px;
+}
+
+/* Count Text */
+.icon span {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+  .icon-section {
+    flex-direction: column;
+  }
+
+  .icon {
+    margin-bottom: 10px;
+  }
+}
+
