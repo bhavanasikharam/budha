@@ -1,5 +1,5 @@
 {
-  "homepage": "https://bhavanasikharam.github.io/Budhareact",
+  "homepage": "https://bhavanasikharam.github.io/budha",
   "name": "budha-react",
   "private": true,
   "version": "0.0.0",
@@ -9,8 +9,8 @@
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+     "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.0.0",
@@ -18,8 +18,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
-    "vite": "^6.2.0",
-    "gh-pages": "^6.0.0"
+    "gh-pages": "^6.3.0",
+    "vite": "^6.2.0"
   }
 }
-
