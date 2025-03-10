@@ -18,9 +18,9 @@
 }
 
 .toggle-btn {
-  background: #333;
+  background:#818282;
   color: white;
-  border: none;
+  border: circle;
   padding: 10px;
   cursor: pointer;
 }
@@ -34,6 +34,7 @@
   position: relative;
   background: #ddd;
   overflow: hidden;
+  color: #333; /* Ensure text inside the main container is dark for better visibility */
 }
 
 /* Image container to hold both images */
@@ -68,14 +69,13 @@
   filter: drop-shadow(0px 20px 30px rgba(255, 255, 255, 0.7)); 
 }
 
-h5{
-   color:peru ;
+h5 {
+  color:rgba(208, 140, 13, 0.839); /* Darker red for better visibility */
 }
 
-button{
- 
-  background-color:peru;
-  color: #ddd;
+button {
+  background-color: rgba(208, 140, 13, 0.839); /* Gold-like background */
+  color: white; /* Lighter text for contrast */
   margin-right: 10px;
 }
 
@@ -146,4 +146,3 @@ button{
     margin-bottom: 10px;
   }
 }
-
