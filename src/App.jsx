@@ -60,11 +60,11 @@ const App = () => {
               )}
             </p>
 
-            {/* Read More / Read Less button */}
+          {/* Read More / Read Less button */}
             <div style={{ display: "flex", alignItems: "center", color: "peru", cursor: "pointer" }} onClick={() => setShowMore(!showMore)}>
               <FaArrowRight style={{ marginRight: "8px" }} />
               <h5>{showMore ? "READ LESS" : "READ MORE"}</h5>
-            </div>
+            </div> 
 
             <button>ADD TO COLLECTION</button>
             <button>SOUVENIR</button>
