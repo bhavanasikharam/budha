@@ -14,35 +14,38 @@ const App = () => {
   return (
     <div className="container">
       {/* Sidebar */}
-      <div className={`sidebar ${isSidebarOpen ? "open" : "closed"}`}>
-        <button className="toggle-btn" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
-          {isSidebarOpen ? "←" : "→"}
+      <div className={`sidebar ${isExpanded ? "expanded" : ""}`}>
+        <button className="toggle-btn" onClick={() => setIsSidebarOpen(!isExpanded)}>
+          {isExpanded ? "Hide Image" : "how Image"}
         </button>
         {isSidebarOpen && (
           <div className="content">
             <h4 style={{ color: "#333" }}>MAITREYA BUDDHA IN GESTURE OF FEARLESSNESS (ABHAYA MUDRA)</h4>
 
-            {/* Icon Section */}
-            <div className="icon-section">
-              {/* Like Button */}
-              <div className="icon" style={{ display: "flex", flexDirection: "column", alignItems: "center" }} onClick={() => setLikes(likes + 1)}>
-                <FaHeart />
-                <span>{likes}</span>
-              </div>
 
-              {/* Share Count */}
-              <div className="icon" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                <FaShareAlt size={30} />
-                <span>{shares}</span>
-              </div>
+           {/* Icon Section */}
+<div className="icon-section">
+  {/* Like Button */}
+  <div className="icon" onClick={() => setLikes(likes + 1)}>
+    <FaHeart />
+    <span>{likes}</span>
+  </div>
 
-              {/* View Count */}
-              <div className="icon" style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                <FaEye />
-                <span>{views}</span>
-              </div>
+  {/* Share Count */}
+  <div className="icon">
+    <FaShareAlt size={30} />
+    <span>{shares}</span>
+  </div>
+
+  {/* View Count */}
+  <div className="icon">
+    <FaEye />
+    <span>{views}</span>
+  </div>
+
+
+
             </div>
-
             <p><strong>Dynasty:</strong> Ahichchatra</p>
             <p><strong>Period:</strong> 200 CE</p>
             <p><strong>Material:</strong> Sandstone</p>
