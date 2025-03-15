@@ -1,150 +1,153 @@
-/* Container and Sidebar styles */
+/* General Layout */
 .container {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: row;
+}
+
+.sidebar {
+  width: 350px;
+  background: #f8f8f8;
+  padding: 20px;
+  transition: all 0.3s ease;
+  overflow: auto;
+  max-height: 100vh;
+}
+
+.sidebar.closed {
+  width: 50px;
+  overflow: hidden;
+}
+
+.toggle-btn {
+  background: #818282;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #ddd;
+  overflow: hidden;
+  color: #333;
+}
+
+/* Image Styling */
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.statue {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 545px;
+  opacity: 0.8;
+  z-index: 2;
+  filter: drop-shadow(0px 20px 30px rgba(255, 255, 255, 0.7));
+}
+
+/* Read More Section */
+.read-more {
+  display: flex;
+  align-items: center;
+  color: peru;
+  cursor: pointer;
+}
+
+.read-more h5 {
+  margin-left: 8px;
+}
+
+/* Buttons */
+button {
+  background-color: rgba(208, 140, 13, 0.839);
+  color: white;
+  margin-right: 10px;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Icon Section */
+.icon-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.icon:hover {
+  color: #646cff;
+}
+
+.icon span {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
   }
-  
+
   .sidebar {
-    width: 350px;
-    background: #f8f8f8;
-    padding: 20px;
-    transition: width 0.3s ease;
-    overflow: auto;
-    max-height: 100vh;
-  }
-  
-  .sidebar.closed {
-    width: 50px;
-    overflow: hidden;
-  }
-  
-  .toggle-btn {
-    background:#818282;
-    color: white;
-    border: circle;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  /* Main container styles */
-  .main {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    background: #ddd;
-    overflow: hidden;
-    color: #333; /* Ensure text inside the main container is dark for better visibility */
-  }
-  
-  /* Image container to hold both images */
-  .image-container {
-    position: relative;
     width: 100%;
-    height: 100%;
-  }
-  
-  /* Background image settings */
-  .background {
+    height: auto;
+    max-height: 40vh;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    z-index: 1; 
+    background: rgba(248, 248, 248, 0.95);
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
   }
-  
-  /* Statue image settings */
-  .statue {
-    position: absolute;
-    top: 30%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    max-width: 545px; 
-    opacity: 0.8; 
-    z-index: 2; 
-    
-    /* White shadow effect */
-    filter: drop-shadow(0px 20px 30px rgba(255, 255, 255, 0.7)); 
+
+  .toggle-btn {
+    display: none;
   }
-  
-  h5 {
-    color:rgba(208, 140, 13, 0.839); /* Darker red for better visibility */
-  }
-  
-  button {
-    background-color: rgba(208, 140, 13, 0.839); /* Gold-like background */
-    color: white; /* Lighter text for contrast */
-    margin-right: 10px;
-  }
-  
-  /* Mobile view adjustments */
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-    }
-  
-    .sidebar {
-      width: 100%;
-      height: auto;
-    }
-  
-    .main {
-      height: 60vh;
-    }
-  
-    /* Adjust statue size for mobile */
-    .statue {
-      max-width: 90%;
-    }
-  }
-  
-  /* App.css */
-  
-  /* Icon Section Container */
+
   .icon-section {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 20px;
+    flex-direction: row;
+    justify-content: center;
   }
-  
-  /* Icon Styling */
-  .icon {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: #333;
-    transition: color 0.3s ease;
+
+  .main {
+    height: 60vh;
   }
-  
-  /* Hover effect for icons */
-  .icon:hover {
-    color: #646cff;
+
+  .statue {
+    max-width: 90%;
   }
-  
-  /* Icon Font Awesome */
-  .icon i {
-    margin-right: 8px;
-  }
-  
-  /* Count Text */
-  .icon span {
-    font-size: 1rem;
-    font-weight: 600;
-  }
-  
-  /* Mobile View Adjustments */
-  @media (max-width: 768px) {
-    .icon-section {
-      flex-direction: column;
-    }
-  
-    .icon {
-      margin-bottom: 10px;
-  }
-  }
+}
