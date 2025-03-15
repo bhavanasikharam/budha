@@ -51,7 +51,7 @@ const App = () => {
             Material : Sandstone <br />
             Location : National Museum</p>
 
-            <h4 style={{ color: "#333" }}>Description</h4>
+            <h3 style={{ color: "#333" }}>Description :</h3>
             <p style={{ color: "#444" }}>
               Maitreya, the future Buddha-to-be, resides in the Tushita heaven as a bodhisattva waiting to redeem humanity.
               {showMore && (
