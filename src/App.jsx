@@ -3,8 +3,10 @@ import "./App.css";
 import image1 from "./images/image1.png";
 import bugdha2 from "./images/bugdha2.png";
 import { FaHeart, FaShareAlt, FaEye, FaArrowRight } from "react-icons/fa";
+import { useMediaQuery } from 'react-responsive';
 
 const App = () => {
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 1224px)' });
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
   const [likes, setLikes] = useState(0);
   const [showMore, setShowMore] = useState(false); // State for Read More functionality
@@ -12,7 +14,14 @@ const App = () => {
   const views = 27;
 
   return (
-    <div className="container">
+    
+<div className="container">
+  {isTabletOrMobile ? (
+        <p>.</p>
+      ) : (
+        <p></p>
+      )}
+   
       {/* Sidebar */}
       <div className={`sidebar ${isSidebarOpen ? "open" : "closed"}`}>
         <button className="toggle-btn" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
@@ -83,6 +92,8 @@ const App = () => {
         </div>
       </div>
     </div>
+
+    
   );
 };
 

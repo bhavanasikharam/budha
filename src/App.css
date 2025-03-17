@@ -1,17 +1,18 @@
 /* Container and Sidebar styles */
 .container {
   display: flex;
-  height: 90vh;
+  flex-direction: row;
+  height: 85vh;
   width: 100vw;
 }
 
 .sidebar {
-  width: 350px;
+  width: 100%;
   background: #f8f8f8;
   padding: 20px;
-  transition: width 0.3s ease;
+  
   overflow: auto;
-  max-height: 100vh;
+  
 }
 
 .sidebar.closed {
@@ -36,7 +37,7 @@
   position: relative;
   background: #ddd;
   overflow: hidden;
-  color: #333; /* Ensure text inside the main container is dark for better visibility */
+  
 }
 
 /* Image container to hold both images */
@@ -84,16 +85,16 @@ button {
 /* Mobile view adjustments */
 @media (max-width: 768px) {
   .container {
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .sidebar {
-    width: 100%;
-    height: auto;
+    width: 350px;
+    height: 100vh;
   }
 
   .main {
-    height: 60vh;
+    height: auto;
   }
 
   /* Adjust statue size for mobile */
@@ -111,7 +112,7 @@ button {
   align-items: center;
   margin-top: 30px;
   margin-bottom: 30px;
-  margin-right:250px;
+  margin-right:100%;
   gap: 25px;
   
 }
