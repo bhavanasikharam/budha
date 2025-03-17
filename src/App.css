@@ -138,3 +138,21 @@ button {
     max-width: 90%;
   }
 }
+.icon {
+  font-size: 1.6rem;
+}
+
+@media (max-width: 768px) {
+  .icon {
+    font-size: 1.2rem;
+  }
+}
+.icon {
+  font-size: 1.6rem;
+}
+
+@media (max-width: 768px) {
+  .icon {
+    font-size: 1.2rem;
+  }
+}
