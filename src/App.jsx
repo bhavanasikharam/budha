@@ -17,7 +17,7 @@ const App = () => {
     
 <div className="container">
   {isTabletOrMobile ? (
-        <p>.</p>
+        <p></p>
       ) : (
         <p></p>
       )}

@@ -81,28 +81,6 @@ button {
   color: white; /* Lighter text for contrast */
   margin-right: 10px;
 }
-
-/* Mobile view adjustments */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: row;
-  }
-
-  .sidebar {
-    width: 350px;
-    height: 100vh;
-  }
-
-  .main {
-    height: auto;
-  }
-
-  /* Adjust statue size for mobile */
-  .statue {
-    max-width: 90%;
-  }
-}
-
 /* App.css */
 
 /* Icon Section Container */
@@ -144,12 +122,19 @@ button {
 }
 
 /* Mobile View Adjustments */
+
 @media (max-width: 768px) {
-  .icon-section {
+  .container {
     flex-direction: column;
   }
-
-  .icon {
-    margin-bottom: 10px;
-}
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+  .main {
+    height: auto;
+  }
+  .statue {
+    max-width: 90%;
+  }
 }
